@@ -12,6 +12,9 @@
 }
 :root {
   --slate50: #F8FAFC;
+  --slate100: #E2E8F0;
+  --slate200: #E2E8F0;
+  --slate300: #CBD5E1;
   --slate400: #94A3B8;
   --slate600: #475569;
   --contentPadding: 1rem;
@@ -97,13 +100,51 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
 }
+/* Tasks divs */ 
+.taskLine {
+  display: flex;
+}
+.taskColorStats {
+  width: 3px;
+  background: lightgreen;
+}
 .taskList {
   display: flex;  
+  padding: .2rem;
+  height: 30px;
+  align-items: center;
+  background: var(--slate100);
+  gap: .5rem;
+}
+.taskComplete {
+  background: pink;
+  margin: .3rem;
+  width: 13px;
+  height: 13px;
+}
+.taskTitle {
+  flex:1;
+}
+.taskDetails {
+  border: 2px solid var(--slate600);
+}
+.taskDate {
+  font-size: .5rem;
+  color: var(--slate300);
+}
+.taskEdit {
+  height: 12px;
+  width: 12px;
+  background: var(--slate600);
+}
+.taskDelete {
+  height: 12px;
+  width: 12px;
+  background: var(--slate600);
 }
 
 
 /*transitions*/
-
 #save:hover {
   background: var(--slate400);
 }
