@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
   font-family: 'Argentum Novus';
   src: url('./font/argentum-novus/ArgentumNovus-Regular.ttf') format('truetype');
   font-weight: 600;
@@ -28,8 +28,12 @@
   --slate300: #CBD5E1;
   --slate400: #94A3B8;
   --slate600: #475569;
+  --sky300: #7dd3fc;
+  --sky400: #38BDF8;
+  --sky500: #0ea5e9;
   --contentPadding: 1rem;
   --subItemPadding: .5rem;
+  --miniPadding: .15rem;
   --subItemGap: 1rem;
   --listMargin: .5rem;
   --fontHighlight: 1.1rem;
@@ -149,13 +153,13 @@ body {
   flex: 1;
 }
 .listDetails {
-  border: 1px solid blue;
+  border: 2px solid var(--sky400);
+  border-radius: .2rem;
   color: var(--slate400);
   text-align: center;
-  font-weight: 400;
+  padding: var(--miniPadding);
 }
 .listDate {
-  font-weight: 400;
   text-align: center;
 }
 .listEdit {
