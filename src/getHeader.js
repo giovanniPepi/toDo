@@ -1,7 +1,7 @@
   import body from "./globalDom";
   
   // creates header
-  const getHeader = (() => {
+  const getHeader = () => {
     const header = document.createElement('div');
     header.setAttribute('class', 'header');
 
@@ -18,6 +18,6 @@
     header.appendChild(save);
 
     body.prepend(header);
-  })();
+  };
 
   export default getHeader;
