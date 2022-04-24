@@ -21,6 +21,8 @@
   --subItemPadding: .5rem;
   --subItemGap: 1rem;
   --listMargin: .5rem;
+  --fontHighlight: 1.1rem;
+  --fontTask: .9rem;
   font-family: 'Argentum Novus';
   font-weight: normal;
 }
@@ -80,16 +82,19 @@ body {
   flex-direction: column;
   grid-column: 1/2;
   grid-row: auto;
+  padding: var(--contentPadding);
+  font-size: var(--fontHighlight);
 }
 .rightContainer {
   grid-column: 2/3;
   grid-row: auto;
   padding: var(--contentPadding);
 }
-.menu {
+.menuTime {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: var(--subItemGap);
+  flex: 1;
 }
 .options {
   padding: var(--subItemPadding);
@@ -110,6 +115,7 @@ body {
   height: 2rem;
   align-items: center;
   gap: .5rem;
+  font-size: var(--fontTask);
 }
 .listCheck {
   height: 12px;
@@ -137,6 +143,12 @@ body {
   width: 12px;
   background: grey;  
   margin-right: var(--listMargin);
+}
+.addBtn{
+  flex:0;
+}
+.subProj {
+  font-size: 1rem ;
 }
 
 /*transitions*/
