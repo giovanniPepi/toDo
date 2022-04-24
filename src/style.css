@@ -35,6 +35,7 @@
   --listMargin: .5rem;
   --fontHighlight: 1.1rem;
   --fontTask: .9rem;
+  --leftPadding: 2.5vw;
   --miniBoxSizing: clamp(8px, 1.7vw, 14px);
   --miniBoxSizingIcon: clamp(11px, 1.8vw, 17px);
   --boxShadowing: 0.1rem 0.2rem .3rem rgba(0, 0, 0, 0.3);
@@ -69,46 +70,54 @@ body {
   grid-template-columns: 1fr 20fr;
   grid-template-rows: 1fr;
   padding: var(--subItemPadding);
+  max-height: 100vh;  
 }
 .header {
   display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  padding: var(--subItemPadding);
+  padding: 1rem 2rem 1rem 2rem;
   gap: var(--subItemGap);
-  background: var(--slate50);
-  
+  background: var(--slate50); 
 }
 .leftContainer {
-  display: flex;
-  flex-direction: column;
   grid-column: 1/2;
   grid-row: auto;
-  padding: var(--contentPadding);
   font-size: var(--fontHighlight);
   background: var(--slate200);
-  gap: 2rem;
+  padding: var(--leftPadding);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px, repeat(2, minmax(50px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: var(--subItemGap);
 }
 .rightContainer {
   grid-column: 2/3;
   grid-row: auto;
   padding: var(--contentPadding);
 }
-.menuTime {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem;
-  flex: 1;
-  font-weight: bold;
+.addBtn{
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  background: var(--slate600);
+  border-radius: 2rem;
+  box-shadow: var(--boxShadowing);
+  align-self: flex-start;
+  margin: 1rem 0 1rem 0;
 }
-.timeList, .projectList {
+
+.projectList, .timeList {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--subItemGap);
 }
+
 .options {
   padding: var(--subItemPadding);
 }
@@ -169,21 +178,6 @@ body {
   margin-right: var(--listMargin);
   background-image: url("/src/icons/delete.svg");
   background-size: cover;
-}
-.addBtnDiv {
-  display: flex;
-  padding: .5rem;
-  justify-content: center;
-}
-.addBtn{
-  font-size: 2rem;
-  width: 3rem;
-  height: 3rem;
-  color: white;
-  background: var(--slate600);
-  border-radius: 2rem;
-  align-self: center;
-  box-shadow: var(--boxShadowing);
 }
 .subProj {
   font-size: 1rem ;

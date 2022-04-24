@@ -2,9 +2,6 @@ const getLeftContainer = () => {
   const leftContainer = document.createElement('div');
   leftContainer.setAttribute('class', 'leftContainer');
 
-  const menuTime = document.createElement('div');
-  menuTime.setAttribute('class', 'menuTime');
-
   const timeList = document.createElement('ul')
   timeList.setAttribute('class', 'timeList');
   
@@ -40,9 +37,6 @@ const getLeftContainer = () => {
   subProjLi3.setAttribute('class', 'subProj');
   subProjLi3.textContent = 'Proj3';
 
-  const addBtnDiv = document.createElement('div');
-  addBtnDiv.setAttribute('class', 'addBtnDiv');
-
   const addBtn = document.createElement('button');
   addBtn.setAttribute('class', 'addBtn');
   addBtn.textContent = '+';
@@ -57,14 +51,10 @@ const getLeftContainer = () => {
   timeList.appendChild(li3);
   timeList.appendChild(li4);
 
-  menuTime.appendChild(timeList);
-  menuTime.appendChild(projectList);
+  leftContainer.appendChild(addBtn);
+  leftContainer.appendChild(timeList);
+  leftContainer.appendChild(projectList);
 
-  
-  addBtnDiv.appendChild(addBtn);
-
-  leftContainer.appendChild(addBtnDiv);
-  leftContainer.appendChild(menuTime);
   return leftContainer;
 }
 
