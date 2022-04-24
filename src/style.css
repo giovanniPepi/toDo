@@ -55,9 +55,8 @@ body {
   grid-row: 2/3;
   margin: 5vh 5vw 5vh 5vw;
   display: grid;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 1fr 20fr;
   grid-template-rows: 1fr;
-
 }
 .header {
   grid-column: 1/4;
@@ -82,7 +81,7 @@ body {
   flex-direction: column;
   grid-column: 1/2;
   grid-row: auto;
-  padding: var(--contentPadding);
+  padding: var(--subItemPadding);
   font-size: var(--fontHighlight);
 }
 .rightContainer {
@@ -112,7 +111,7 @@ body {
 .listItem {
   border-left: 3px solid green;
   display: flex;
-  height: 2rem;
+  height: 3rem;
   align-items: center;
   gap: .5rem;
   font-size: var(--fontTask);
@@ -129,9 +128,11 @@ body {
 .listDetails {
   border: 1px solid blue;
   color: var(--slate400);
+  text-align: center;
 }
 .listDate {
   color: var(--slate300);
+  text-align: center;
 }
 .listEdit {
   height: 12px;
@@ -145,7 +146,13 @@ body {
   margin-right: var(--listMargin);
 }
 .addBtn{
-  flex:0;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  background: var(--slate600);
+  border-radius: 50%;
+  align-self: center;
 }
 .subProj {
   font-size: 1rem ;
