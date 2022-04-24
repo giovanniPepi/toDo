@@ -29,6 +29,9 @@
   --sky300: #7dd3fc;
   --sky400: #38BDF8;
   --sky500: #0ea5e9;
+  --lime400: #A3E635;
+  --lime500: #84cc16;
+  --borderRadiusSmall: .3rem;
   --contentPadding: 1rem;
   --subItemPadding: .5rem;
   --miniPadding: .15rem;
@@ -125,7 +128,7 @@ body {
 #save {
   color:var(--slate50);
   background: var(--slate600);
-  border-radius: 10%;
+  border-radius: var(--borderRadiusSmall);
   box-shadow: var(--boxShadowing);
 }
 .title {
@@ -148,17 +151,18 @@ body {
   font-size: var(--fontTask);
 }
 .listCheck {
-  height: var(--miniBoxSizing);
-  width: var(--miniBoxSizing);
+  height: 1rem;
+  width: 1rem;
   margin-left: var(--listMargin);
-  background: red;
+  border: 2px solid var(--lime500);
+  border-radius: var(--borderRadiusSmall);
 }
 .listTitle {
   flex: 1;
 }
 .listDetails {
   border: 2px solid var(--sky400);
-  border-radius: .2rem;
+  border-radius: var(--borderRadiusSmall);
   color: var(--slate400);
   text-align: center;
   padding: var(--miniPadding);

@@ -1,3 +1,2 @@
 const body = document.querySelector('body'); 
-
-export default body;
+export default body

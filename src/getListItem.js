@@ -1,5 +1,7 @@
+import checkIcon from "./icons/check-bold.svg"
 import editIcon from "./icons/square-edit-outline.svg";
 import deleteIcon from  "./icons/delete.svg";
+
 
 const getListItem = () => {
   const listItem = document.createElement('div');
@@ -7,6 +9,7 @@ const getListItem = () => {
 
   const listCheck = document.createElement('div');
   listCheck.setAttribute('class', 'listCheck');
+  listCheck.innerHTML = checkIcon;
 
   const listTitle = document.createElement('div');
   listTitle.setAttribute('class', 'listTitle');
