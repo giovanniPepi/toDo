@@ -24,6 +24,7 @@
   --fontHighlight: 1.1rem;
   --fontTask: .9rem;
   --miniBoxSizing: clamp(8px, 1.7vw, 14px);
+  --boxShadowing: 0.1rem 0.2rem .3rem rgba(0, 0, 0, 0.3);
   font-family: 'Argentum Novus';
   font-weight: normal;
 }
@@ -103,10 +104,12 @@ body {
   color:var(--slate50);
   background: var(--slate600);
   border-radius: 10%;
+  box-shadow: var(--boxShadowing);
 }
 .title {
   font-size: 1.5rem;
   font-weight: bold;
+  box-shadow: var(--boxShadowing);
 }
 /* Tasks divs */ 
 .listItem {
@@ -146,20 +149,26 @@ body {
   background: grey;  
   margin-right: var(--listMargin);
 }
+.addBtnDiv {
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+}
 .addBtn{
   font-size: 2rem;
   width: 3rem;
   height: 3rem;
   color: white;
   background: var(--slate600);
-  border-radius: 50%;
+  border-radius: 2rem;
   align-self: center;
+  box-shadow: var(--boxShadowing);
 }
 .subProj {
   font-size: 1rem ;
 }
 
 /*transitions*/
-#save:hover {
+#save:hover, .addBtn:hover {
   background: var(--slate400);
 }
