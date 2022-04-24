@@ -1,9 +1,9 @@
 const getLeftContainer = () => {
-
   const leftContainer = document.createElement('div');
   leftContainer.setAttribute('class', 'leftContainer');
 
   const menuTime = document.createElement('ul');
+  menuTime.setAttribute('class', 'menuTime');
 
   const li1 = document.createElement('li');
   li1.setAttribute('class', 'li1');
@@ -36,16 +36,30 @@ const getLeftContainer = () => {
   const li8 = document.createElement('li');
   li8.setAttribute('class', 'subProj');
   li8.textContent = 'Proj3';
-  
+
+  const addBtnDiv = document.createElement('div');
+  addBtnDiv.setAttribute('class', 'addBtnDiv');
+
+  const addBtn = document.createElement('button');
+  addBtn.setAttribute('class', 'addBtn');
+  addBtn.textContent = '+';
 
   //appends
-  const liList = document.querySelectorAll('li');
-  liList.forEach((li => {
-    menuTime.appendChild(li);  
-  }));
-  leftContainer.appendChild(menuTime);
+  menuTime.appendChild(li1);
+  menuTime.appendChild(li2);
+  menuTime.appendChild(li3);
+  menuTime.appendChild(li4);
+  menuTime.appendChild(li5);
+  menuTime.appendChild(li6);
+  menuTime.appendChild(li7);
+  menuTime.appendChild(li8);
 
+  addBtnDiv.appendChild(addBtn);
+
+  leftContainer.appendChild(menuTime);
+  leftContainer.appendChild(addBtnDiv);
   return leftContainer;
 }
 
 export default getLeftContainer;
+

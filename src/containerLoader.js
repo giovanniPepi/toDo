@@ -1,5 +1,6 @@
 import body from "./globalDom";
-import getLeftContainer from "./leftContainer";
+import getLeftContainer from "./getLeftContainer";
+import getRightContainer from "./getRightContainer";
 
 // module handler
 const getContainer = (() => {
@@ -9,6 +10,9 @@ const getContainer = (() => {
 
   const leftContainer = getLeftContainer()
   container.appendChild(leftContainer);
+
+  const rightContainer = getRightContainer();
+  container.appendChild(rightContainer);
 
   body.appendChild(container);
   return container;
