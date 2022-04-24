@@ -51,7 +51,10 @@ body {
   grid-column: 1/4;
   grid-row: 2/3;
   margin: 5vh 5vw 5vh 5vw;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: 1fr;
+
 }
 .header {
   grid-column: 1/4;
@@ -72,16 +75,15 @@ body {
   gap: var(--subItemGap);
 }
 .leftContainer {
-  flex: 0;
-  min-width: 8rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  grid-column: 1/2;
+  grid-row: auto;
 }
 .rightContainer {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  grid-column: 2/3;
+  grid-row: auto;
+  padding: var(--contentPadding);
 }
 .menu {
   display: flex;
@@ -101,48 +103,10 @@ body {
   font-weight: bold;
 }
 /* Tasks divs */ 
-.taskLine {
-  display: flex;
+.listItem {
+  border-left: 3px solid green;
+  
 }
-.taskColorStats {
-  width: 3px;
-  background: lightgreen;
-}
-.taskList {
-  display: flex;  
-  padding: .2rem;
-  height: 30px;
-  align-items: center;
-  background: var(--slate100);
-  gap: .5rem;
-}
-.taskComplete {
-  background: pink;
-  margin: .3rem;
-  width: 13px;
-  height: 13px;
-}
-.taskTitle {
-  flex:1;
-}
-.taskDetails {
-  border: 2px solid var(--slate600);
-}
-.taskDate {
-  font-size: .5rem;
-  color: var(--slate300);
-}
-.taskEdit {
-  height: 12px;
-  width: 12px;
-  background: var(--slate600);
-}
-.taskDelete {
-  height: 12px;
-  width: 12px;
-  background: var(--slate600);
-}
-
 
 /*transitions*/
 #save:hover {
