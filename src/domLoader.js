@@ -3,10 +3,9 @@ import getContainer from "./containerLoader";
 
 
 //calls modules that handle DOM manipulation
-const domLoader = (() => {
+const domLoader = () => {
   getHeader();
-  getContainer();
- 
-})();
+  getContainer(); 
+};
 
 export default domLoader;
