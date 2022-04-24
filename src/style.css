@@ -156,7 +156,14 @@ body {
   margin-left: var(--listMargin);
   border: 2px solid var(--lime500);
   border-radius: var(--borderRadiusSmall);
+  background: url('./icons/check-bold.png'), var(--lime500);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+.listCheck-teste {
+  background: inherit;
+}
+
 .listTitle {
   flex: 1;
 }

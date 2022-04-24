@@ -6,12 +6,14 @@ const domLoader = () => {
   getHeader();
   getContainer(); 
 
-  const getEventListeners = (() => {
-    const listCheck = document.querySelector('.listCheck');
-    console.log(listCheck);
+  const listCheck = document.querySelector('.listCheck');
 
-    listCheck.addEventListener('click', () => listCheck.innerHTML = '');
-  })();
+  const evaluateCheckList = (e) => {
+    e.target.classList.toggle('listCheck-teste');    
+
+  };
+  
+  listCheck.addEventListener('click', e => evaluateCheckList(e));
 
 
 };
