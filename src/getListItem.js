@@ -1,3 +1,6 @@
+import editIcon from "./icons/square-edit-outline.svg";
+import deleteIcon from  "./icons/delete.svg";
+
 const getListItem = () => {
   const listItem = document.createElement('div');
   listItem.setAttribute('class', 'listItem');
@@ -19,9 +22,11 @@ const getListItem = () => {
 
   const listEdit = document.createElement('div');
   listEdit.setAttribute('class', 'listEdit');
+  listEdit.innerHTML = editIcon;
 
   const listRemove = document.createElement('div');
   listRemove.setAttribute('class', 'listRemove');
+  listRemove.innerHTML = deleteIcon;
   
 
   //appends
