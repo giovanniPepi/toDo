@@ -1,14 +1,25 @@
 @font-face {
   font-family: 'Argentum Novus';
   src: url('./font/argentum-novus/ArgentumNovus-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'Argentum Novus';
-  src: url('./font/argentum-novus/ArgentumNovus-Bold.ttf') format('truetype');
+  src: url('./font/argentum-novus/ArgentumNovus-Medium.ttf') format('truetype');
   font-weight: bold;
+}
+@font-face {
+  font-family: 'Argentum Novus';
+  src: url('./font/argentum-novus/ArgentumNovus-Black.ttf') format('truetype');
   font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Argentum Novus';
+  src: url('./font/argentum-novus/ArgentumNovus-Thin.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
 }
 :root {
   --slate50: #F8FAFC;
@@ -26,7 +37,7 @@
   --miniBoxSizing: clamp(8px, 1.7vw, 14px);
   --boxShadowing: 0.1rem 0.2rem .3rem rgba(0, 0, 0, 0.3);
   font-family: 'Argentum Novus';
-  font-weight: normal;
+  font-weight: 600;
 }
 html {
   height: 100%;
@@ -96,6 +107,7 @@ body {
   flex-direction: column;
   gap: var(--subItemGap);
   flex: 1;
+  font-weight: bold;
 }
 .options {
   padding: var(--subItemPadding);
@@ -108,7 +120,7 @@ body {
 }
 .title {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 900;
   box-shadow: var(--boxShadowing);
 }
 /* Tasks divs */ 
@@ -133,9 +145,10 @@ body {
   border: 1px solid blue;
   color: var(--slate400);
   text-align: center;
+  font-weight: 400;
 }
 .listDate {
-  color: var(--slate300);
+  font-weight: 400;
   text-align: center;
 }
 .listEdit {
