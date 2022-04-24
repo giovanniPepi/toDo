@@ -1,26 +1,20 @@
+import body from "./globalDom";
+import getHeader from "./getHeader";
+
 //calls modules that handle DOM manipulation
 const domLoader = (() => {
-  const body = document.querySelector('body');
 
-  // creates header
-  const getHeader = (() => {
-    const header = document.createElement('div');
-    header.setAttribute('class', 'header');
+  const getContainer = (() => {
+    const container = document.createElement('div');
+    container.setAttribute('class', 'container');
 
-    const title = document.createElement('div');
-    title.setAttribute('class', 'title');
-    title.textContent = 'EasyList';
+    const leftContainer = document.createElement('div');
+    leftContainer.setAttribute('class', 'leftContainer');
 
-    const save = document.createElement('div');
-    save.setAttribute('class', 'options');
-    save.setAttribute('id', 'save');
-    save.textContent = 'save';
+    const rightContainer = document.createElement('div');
+    rightContainer.setAttribute('class', 'rightContainer');
+  })
 
-    header.appendChild(title)
-    header.appendChild(save);
-
-    body.prepend(header);
-  })();
  
 })();
 

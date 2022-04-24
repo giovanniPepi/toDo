@@ -3,5 +3,5 @@ import domLoader from './domLoader';
 
 //loads other modules
 const main = (() =>{
-  
+
 })();
