@@ -23,7 +23,7 @@
 }
 :root {
   --slate50: #F8FAFC;
-  --slate100: #E2E8F0;
+  --slate100: #F1F5F9;
   --slate200: #E2E8F0;
   --slate300: #CBD5E1;
   --slate400: #94A3B8;
@@ -42,9 +42,6 @@
 html {
   height: 100%;
 }
-body *{
-  border: .1px solid var(--slate600); 
-}
 ul {
   /* css reset */
   list-style-type: none;
@@ -53,7 +50,7 @@ ul {
 }
 /*css reset*/
 button {
-  background: inherit;
+  border: none;
 }
 body {
   line-height: 150%;
@@ -62,14 +59,17 @@ body {
   display:grid;
   grid-template-columns: 1fr 20fr 1fr;
   grid-template-rows: 1fr 20fr 1fr;
+  background: var(--slate50);
 }
-.container{
+.container {
   grid-column: 1/4;
-  grid-row: 2/3;
+  grid-row: 2/;
   margin: 5vh 4vw 5vh 4vw;
+  align-self: center;
   display: grid;
   grid-template-columns: 1fr 20fr;
   grid-template-rows: 1fr;
+  padding: var(--subItemPadding);
 }
 .header {
   grid-column: 1/4;
@@ -79,6 +79,7 @@ body {
   align-items: center;
   padding: var(--contentPadding);
   gap: var(--subItemGap);
+  background: var(--slate50);
 }
 .footer {
   grid-column: 1/4;
@@ -96,6 +97,7 @@ body {
   grid-row: auto;
   padding: var(--subItemPadding);
   font-size: var(--fontHighlight);
+  background: var(--slate200);
 }
 .rightContainer {
   grid-column: 2/3;
@@ -119,13 +121,18 @@ body {
   box-shadow: var(--boxShadowing);
 }
 .title {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 900;
-  box-shadow: var(--boxShadowing);
 }
 /* Tasks divs */ 
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .listItem {
-  border-left: 3px solid green;
+  background: var(--slate100);
+  border-left: 4px solid green;
   display: flex;
   height: 3rem;
   align-items: center;
@@ -180,7 +187,10 @@ body {
 .subProj {
   font-size: 1rem ;
 }
-
+.logo {
+  height: 2rem;
+  width: 2rem;
+}
 /*transitions*/
 #save:hover, .addBtn:hover {
   background: var(--slate400);
