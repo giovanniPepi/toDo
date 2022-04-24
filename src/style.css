@@ -20,6 +20,7 @@
   --contentPadding: 1rem;
   --subItemPadding: .5rem;
   --subItemGap: 1rem;
+  --listMargin: .5rem;
   font-family: 'Argentum Novus';
   font-weight: normal;
 }
@@ -105,7 +106,37 @@ body {
 /* Tasks divs */ 
 .listItem {
   border-left: 3px solid green;
-  
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  gap: .5rem;
+}
+.listCheck {
+  height: 12px;
+  width: 12px;
+  margin-left: var(--listMargin);
+  background: red;
+}
+.listTitle {
+  flex: 1;
+}
+.listDetails {
+  border: 1px solid blue;
+  color: var(--slate400);
+}
+.listDate {
+  color: var(--slate300);
+}
+.listEdit {
+  height: 12px;
+  width: 12px;
+  background: black;
+}
+.listRemove {
+  height: 12px;
+  width: 12px;
+  background: grey;  
+  margin-right: var(--listMargin);
 }
 
 /*transitions*/
