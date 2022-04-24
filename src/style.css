@@ -23,6 +23,7 @@
   --listMargin: .5rem;
   --fontHighlight: 1.1rem;
   --fontTask: .9rem;
+  --miniBoxSizing: clamp(8px, 1.7vw, 14px);
   font-family: 'Argentum Novus';
   font-weight: normal;
 }
@@ -53,7 +54,7 @@ body {
 .container{
   grid-column: 1/4;
   grid-row: 2/3;
-  margin: 5vh 5vw 5vh 5vw;
+  margin: 5vh 4vw 5vh 4vw;
   display: grid;
   grid-template-columns: 1fr 20fr;
   grid-template-rows: 1fr;
@@ -117,8 +118,8 @@ body {
   font-size: var(--fontTask);
 }
 .listCheck {
-  height: 12px;
-  width: 12px;
+  height: var(--miniBoxSizing);
+  width: var(--miniBoxSizing);
   margin-left: var(--listMargin);
   background: red;
 }
@@ -135,13 +136,13 @@ body {
   text-align: center;
 }
 .listEdit {
-  height: 12px;
-  width: 12px;
+  height: var(--miniBoxSizing);
+  width: var(--miniBoxSizing);
   background: black;
 }
 .listRemove {
-  height: 12px;
-  width: 12px;
+  height: var(--miniBoxSizing);
+  width: var(--miniBoxSizing);
   background: grey;  
   margin-right: var(--listMargin);
 }
