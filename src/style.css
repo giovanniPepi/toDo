@@ -1,0 +1,219 @@
+  @font-face {
+  font-family: 'Argentum Novus';
+  src: url('./font/argentum-novus/ArgentumNovus-Regular.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Argentum Novus';
+  src: url('./font/argentum-novus/ArgentumNovus-Medium.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Argentum Novus';
+  src: url('./font/argentum-novus/ArgentumNovus-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Argentum Novus';
+  src: url('./font/argentum-novus/ArgentumNovus-Thin.ttf') format('truetype');
+  font-weight: 400;
+}
+:root {
+  --slate50: #F8FAFC;
+  --slate100: #F1F5F9;
+  --slate200: #E2E8F0;
+  --slate300: #CBD5E1;
+  --slate400: #94A3B8;
+  --slate600: #475569;
+  --sky300: #7dd3fc;
+  --sky400: #38BDF8;
+  --sky500: #0ea5e9;
+  --contentPadding: 1rem;
+  --subItemPadding: .5rem;
+  --miniPadding: .15rem;
+  --subItemGap: 1rem;
+  --listMargin: .5rem;
+  --fontHighlight: 1.1rem;
+  --fontTask: .9rem;
+  --miniBoxSizing: clamp(8px, 1.7vw, 14px);
+  --miniBoxSizingIcon: clamp(11px, 1.8vw, 17px);
+  --boxShadowing: 0.1rem 0.2rem .3rem rgba(0, 0, 0, 0.3);
+  --itemTransition: all .1s ease-in-out;
+  font-family: 'Argentum Novus';
+  font-weight: 600;
+}
+html {
+  height: 100%;
+}
+ul {
+  /* css reset */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/*css reset*/
+button {
+  border: none;
+}
+body {
+  line-height: 150%;
+  height: 100vh;
+  margin: 0;
+  display:grid;
+  grid-template-columns: 1fr 20fr 1fr;
+  grid-template-rows: 1fr 20fr 1fr;
+  background: var(--slate50);
+}
+.container {
+  grid-column: 1/4;
+  grid-row: 2/;
+  margin: 5vh 4vw 5vh 4vw;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  grid-template-rows: 1fr;
+  padding: var(--subItemPadding);
+}
+.header {
+  grid-column: 1/4;
+  grid-row: 1/1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--contentPadding);
+  gap: var(--subItemGap);
+  background: var(--slate50);
+}
+.footer {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--contentPadding);
+  gap: var(--subItemGap);
+}
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: auto;
+  padding: var(--contentPadding);
+  font-size: var(--fontHighlight);
+  background: var(--slate200);
+  gap: 2rem;
+}
+.rightContainer {
+  grid-column: 2/3;
+  grid-row: auto;
+  padding: var(--contentPadding);
+}
+.menuTime {
+  display: flex;
+  flex-direction: column;
+  gap: var(--subItemGap);
+  flex: 1;
+  font-weight: bold;
+}
+.options {
+  padding: var(--subItemPadding);
+}
+#save {
+  color:var(--slate50);
+  background: var(--slate600);
+  border-radius: 10%;
+  box-shadow: var(--boxShadowing);
+}
+.title {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+/* Tasks divs */ 
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.listItem {
+  background: var(--slate100);
+  border-left: 4px solid green;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  gap: .5rem;
+  font-size: var(--fontTask);
+}
+.listCheck {
+  height: var(--miniBoxSizing);
+  width: var(--miniBoxSizing);
+  margin-left: var(--listMargin);
+  background: red;
+}
+.listTitle {
+  flex: 1;
+}
+.listDetails {
+  border: 2px solid var(--sky400);
+  border-radius: .2rem;
+  color: var(--slate400);
+  text-align: center;
+  padding: var(--miniPadding);
+}
+.listDate {
+  text-align: center;
+  font-size: .7rem;
+}
+.listEdit {
+  height: var(--miniBoxSizingIcon);
+  width: var(--miniBoxSizingIcon);
+  background-image: url("/src/icons/square-edit-outline.svg");
+  background-size: cover;
+}
+.listRemove {
+  height: var(--miniBoxSizingIcon);
+  width: var(--miniBoxSizingIcon);
+  margin-right: var(--listMargin);
+  background-image: url("/src/icons/delete.svg");
+  background-size: cover;
+}
+.addBtnDiv {
+  display: flex;
+  padding: .5rem;
+}
+.addBtn{
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  background: var(--slate600);
+  border-radius: 2rem;
+  align-self: center;
+  box-shadow: var(--boxShadowing);
+}
+.subProj {
+  font-size: 1rem ;
+  font-weight: 400;
+}
+.logo {
+  height: 2rem;
+  width: 2rem;
+}
+/*transitions*/
+#save:hover, .addBtn:hover {
+  background: var(--slate400);
+}
+.listItem:hover,#save:hover, .addBtn:hover{ 
+  transform: scale(1.02);
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.15);
+}
+li, .title, .listItem, .addBtn {
+  transition: var(--itemTransition);
+}
+li:hover, .title:hover {
+  transform: scale(1.02);
+}
+/*mouse*/
+li, .title, .addBtn, .options, .listEdit, .listRemove, .listDetails,
+.listTitle, .listCheck {
+  cursor: pointer;
+}
