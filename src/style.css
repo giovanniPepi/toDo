@@ -59,15 +59,11 @@ body {
   line-height: 150%;
   height: 100vh;
   margin: 0;
-  display:grid;
-  grid-template-columns: 1fr 20fr 1fr;
-  grid-template-rows: 1fr 20fr 1fr;
+  display:flex;
+  flex-direction: column;
   background: var(--slate50);
 }
 .container {
-  grid-column: 1/4;
-  grid-row: 2/;
-  margin: 5vh 4vw 5vh 4vw;
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 20fr;
@@ -75,24 +71,14 @@ body {
   padding: var(--subItemPadding);
 }
 .header {
-  grid-column: 1/4;
-  grid-row: 1/1;
   display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  padding: var(--contentPadding);
+  padding: var(--subItemPadding);
   gap: var(--subItemGap);
   background: var(--slate50);
-}
-.footer {
-  grid-column: 1/4;
-  grid-row: 3/4;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: var(--contentPadding);
-  gap: var(--subItemGap);
+  
 }
 .leftContainer {
   display: flex;

@@ -55,9 +55,9 @@ const getLeftContainer = () => {
   menuTime.appendChild(li8);
 
   addBtnDiv.appendChild(addBtn);
-
-  leftContainer.appendChild(menuTime);
+  
   leftContainer.appendChild(addBtnDiv);
+  leftContainer.appendChild(menuTime);
   return leftContainer;
 }
 
