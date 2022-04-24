@@ -19,8 +19,12 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(png|jpg|svg|jpeg)$/i,
+        test: /\.(png|jpg|jpeg)$/i,
         type: 'asset/resource',
+      },
+      { 
+        test: /\.svg$/, 
+        loader: 'svg-inline-loader'
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,

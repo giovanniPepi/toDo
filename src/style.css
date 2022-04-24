@@ -2,7 +2,6 @@
   font-family: 'Argentum Novus';
   src: url('./font/argentum-novus/ArgentumNovus-Regular.ttf') format('truetype');
   font-weight: 600;
-  font-style: normal;
 }
 @font-face {
   font-family: 'Argentum Novus';
@@ -12,13 +11,11 @@
 @font-face {
   font-family: 'Argentum Novus';
   src: url('./font/argentum-novus/ArgentumNovus-Black.ttf') format('truetype');
-  font-style: normal;
   font-weight: 900;
 }
 @font-face {
   font-family: 'Argentum Novus';
   src: url('./font/argentum-novus/ArgentumNovus-Thin.ttf') format('truetype');
-  font-style: normal;
   font-weight: 400;
 }
 :root {
@@ -39,7 +36,9 @@
   --fontHighlight: 1.1rem;
   --fontTask: .9rem;
   --miniBoxSizing: clamp(8px, 1.7vw, 14px);
+  --miniBoxSizingIcon: clamp(11px, 1.8vw, 17px);
   --boxShadowing: 0.1rem 0.2rem .3rem rgba(0, 0, 0, 0.3);
+  --itemTransition: all .1s ease-in-out;
   font-family: 'Argentum Novus';
   font-weight: 600;
 }
@@ -99,9 +98,10 @@ body {
   flex-direction: column;
   grid-column: 1/2;
   grid-row: auto;
-  padding: var(--subItemPadding);
+  padding: var(--contentPadding);
   font-size: var(--fontHighlight);
   background: var(--slate200);
+  gap: 2rem;
 }
 .rightContainer {
   grid-column: 2/3;
@@ -138,7 +138,7 @@ body {
   background: var(--slate100);
   border-left: 4px solid green;
   display: flex;
-  height: 3rem;
+  height: 4rem;
   align-items: center;
   gap: .5rem;
   font-size: var(--fontTask);
@@ -161,21 +161,23 @@ body {
 }
 .listDate {
   text-align: center;
+  font-size: .7rem;
 }
 .listEdit {
-  height: var(--miniBoxSizing);
-  width: var(--miniBoxSizing);
-  background: black;
+  height: var(--miniBoxSizingIcon);
+  width: var(--miniBoxSizingIcon);
+  background-image: url("/src/icons/square-edit-outline.svg");
+  background-size: cover;
 }
 .listRemove {
-  height: var(--miniBoxSizing);
-  width: var(--miniBoxSizing);
-  background: grey;  
+  height: var(--miniBoxSizingIcon);
+  width: var(--miniBoxSizingIcon);
   margin-right: var(--listMargin);
+  background-image: url("/src/icons/delete.svg");
+  background-size: cover;
 }
 .addBtnDiv {
   display: flex;
-  justify-content: center;
   padding: .5rem;
 }
 .addBtn{
@@ -190,6 +192,7 @@ body {
 }
 .subProj {
   font-size: 1rem ;
+  font-weight: 400;
 }
 .logo {
   height: 2rem;
@@ -198,4 +201,14 @@ body {
 /*transitions*/
 #save:hover, .addBtn:hover {
   background: var(--slate400);
+}
+.listItem:hover,#save:hover, .addBtn:hover{ 
+  transform: scale(1.02);
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.15);
+}
+li, .title, .listItem {
+  transition: var(--itemTransition);
+}
+li:hover, .title:hover {
+  transform: scale(1.02);
 }
