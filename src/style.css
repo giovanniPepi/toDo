@@ -98,9 +98,16 @@ body {
 .menuTime {
   display: flex;
   flex-direction: column;
-  gap: var(--subItemGap);
+  align-items: center;
+  gap: 5rem;
   flex: 1;
   font-weight: bold;
+}
+.timeList, .projectList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--subItemGap);
 }
 .options {
   padding: var(--subItemPadding);
@@ -166,6 +173,7 @@ body {
 .addBtnDiv {
   display: flex;
   padding: .5rem;
+  justify-content: center;
 }
 .addBtn{
   font-size: 2rem;
@@ -189,7 +197,7 @@ body {
 #save:hover, .addBtn:hover {
   background: var(--slate400);
 }
-.listItem:hover,#save:hover, .addBtn:hover, { 
+.listItem:hover, #save:hover, .addBtn:hover { 
   transform: scale(1.02);
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.15);
 }
@@ -201,6 +209,6 @@ li:hover, .title:hover, .logo:hover {
 }
 /*mouse*/
 li, .title, .addBtn, .options, .listEdit, .listRemove, .listDetails,
-.listTitle, .listCheck, .logo {
+.listTitle, .listCheck, .logo, .projectList {
   cursor: pointer;
 }

@@ -2,11 +2,14 @@ const getLeftContainer = () => {
   const leftContainer = document.createElement('div');
   leftContainer.setAttribute('class', 'leftContainer');
 
-  const menuTime = document.createElement('ul');
+  const menuTime = document.createElement('div');
   menuTime.setAttribute('class', 'menuTime');
 
+  const timeList = document.createElement('ul')
+  timeList.setAttribute('class', 'timeList');
+  
   const li1 = document.createElement('li');
-  li1.setAttribute('class', 'li1');
+  li1.setAttribute('class', 'liDefault');
   li1.textContent = 'Recent';
 
   const li2 = document.createElement('li');
@@ -21,21 +24,21 @@ const getLeftContainer = () => {
   li4.setAttribute('class', 'liDefault');
   li4.textContent = 'Month';
 
-  const li5 = document.createElement('li');
-  li5.setAttribute('class', 'liDefault');
-  li5.textContent = 'PROJECTS';
+  const projectList = document.createElement('ul');
+  projectList.setAttribute('class', 'projectList');
+  projectList.textContent = 'PROJECTS';
 
-  const li6 = document.createElement('li');
-  li6.setAttribute('class', 'subProj');
-  li6.textContent = 'Proj1';
+  const subProjLi1 = document.createElement('li');
+  subProjLi1.setAttribute('class', 'subProj');
+  subProjLi1.textContent = 'Proj1';
 
-  const li7 = document.createElement('li');
-  li7.setAttribute('class', 'subProj');
-  li7.textContent = 'Proj2';
+  const subProjLi2 = document.createElement('li');
+  subProjLi2.setAttribute('class', 'subProj');
+  subProjLi2.textContent = 'Proj2';
 
-  const li8 = document.createElement('li');
-  li8.setAttribute('class', 'subProj');
-  li8.textContent = 'Proj3';
+  const subProjLi3 = document.createElement('li');
+  subProjLi3.setAttribute('class', 'subProj');
+  subProjLi3.textContent = 'Proj3';
 
   const addBtnDiv = document.createElement('div');
   addBtnDiv.setAttribute('class', 'addBtnDiv');
@@ -45,17 +48,21 @@ const getLeftContainer = () => {
   addBtn.textContent = '+';
 
   //appends
-  menuTime.appendChild(li1);
-  menuTime.appendChild(li2);
-  menuTime.appendChild(li3);
-  menuTime.appendChild(li4);
-  menuTime.appendChild(li5);
-  menuTime.appendChild(li6);
-  menuTime.appendChild(li7);
-  menuTime.appendChild(li8);
+  projectList.appendChild(subProjLi1);
+  projectList.appendChild(subProjLi2);
+  projectList.appendChild(subProjLi3);
 
-  addBtnDiv.appendChild(addBtn);
+  timeList.appendChild(li1);
+  timeList.appendChild(li2);
+  timeList.appendChild(li3);
+  timeList.appendChild(li4);
+
+  menuTime.appendChild(timeList);
+  menuTime.appendChild(projectList);
+
   
+  addBtnDiv.appendChild(addBtn);
+
   leftContainer.appendChild(addBtnDiv);
   leftContainer.appendChild(menuTime);
   return leftContainer;
