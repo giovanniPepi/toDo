@@ -206,9 +206,14 @@ body {
   transform: scale(1.02);
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.15);
 }
-li, .title, .listItem {
+li, .title, .listItem, .addBtn {
   transition: var(--itemTransition);
 }
 li:hover, .title:hover {
   transform: scale(1.02);
+}
+/*mouse*/
+li, .title, .addBtn, .options, .listEdit, .listRemove, .listDetails,
+.listTitle, .listCheck {
+  cursor: pointer;
 }
