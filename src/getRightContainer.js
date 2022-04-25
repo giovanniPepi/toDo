@@ -8,7 +8,8 @@ const getRightContainer = (listLength) => {
   const listContainer = document.createElement('div');
   listContainer.setAttribute('class', 'listContainer');
 
-  for (let i = 0; i <= listLength; i++) {
+  // 6 to avoid overflow
+  for (let i = 0; i <= 6; i++) {
     let listItem = getListItem();
     listContainer.appendChild(listItem);
   }
