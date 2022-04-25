@@ -23,7 +23,7 @@ module.exports = {
         type: 'asset/resource',
       },
       { 
-        test: /\.svg$/, 
+        test: /\.svg$/i, 
         loader: 'svg-inline-loader'
       },
       {

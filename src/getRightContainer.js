@@ -1,6 +1,6 @@
 import getListItem from "./getListItem";
 
-const getRightContainer = () => {
+const getRightContainer = (listLength) => {
 
   const rightContainer = document.createElement('div');
   rightContainer.setAttribute('class', 'rightContainer');
@@ -8,9 +8,12 @@ const getRightContainer = () => {
   const listContainer = document.createElement('div');
   listContainer.setAttribute('class', 'listContainer');
 
-  const listItem = getListItem();
-  listContainer.appendChild(listItem);
-
+  // 6 to avoid overflow
+  for (let i = 0; i <= 6; i++) {
+    let listItem = getListItem();
+    listContainer.appendChild(listItem);
+  }
+  
   //appends
 
   rightContainer.appendChild(listContainer);
