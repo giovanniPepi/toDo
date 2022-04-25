@@ -171,22 +171,32 @@ body {
 .listTitle-unchecked {
   text-decoration: none;
 }
-.listDetails {
-  border: 2px solid var(--sky400);
+.listDetails, .listDetails-unchecked {
+  border: 2px solid var(--sky300);
   border-radius: var(--borderRadiusSmall);
-  color: var(--slate400);
+  color: var(--slate300);
   text-align: center;
   padding: var(--miniPadding);
 }
-.listDate {
+.listDetails-unchecked {
+  border: 2px solid var(--sky400);
+  color: var(--slate400);
+}
+
+.listDate, .listDate-unchecked {
   text-align: center;
   font-size: .7rem;
+  font-weight: 400;
 }
-.listEdit {
+.listDate-unchecked {
+  font-weight: 600;
+}
+.listEdit, .listEdit-unchecked {
   height: var(--miniBoxSizingIcon);
   width: var(--miniBoxSizingIcon);
   background-image: url("/src/icons/square-edit-outline.svg");
   background-size: cover;
+  fill: gray;
 }
 .listRemove {
   height: var(--miniBoxSizingIcon);
@@ -194,6 +204,10 @@ body {
   margin-right: var(--listMargin);
   background-image: url("/src/icons/delete.svg");
   background-size: cover;
+  fill: gray;
+}
+.listEdit-unchecked, .listRemove-unchecked {
+  fill: inherit;
 }
 .subProj {
   font-size: 1rem ;
