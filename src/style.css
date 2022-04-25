@@ -160,12 +160,16 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.listCheck-teste {
+.listCheck-unchecked {
   background: inherit;
 }
 
-.listTitle {
+.listTitle, .listTitle-unchecked {
   flex: 1;
+  text-decoration: line-through;
+}
+.listTitle-unchecked {
+  text-decoration: none;
 }
 .listDetails {
   border: 2px solid var(--sky400);
