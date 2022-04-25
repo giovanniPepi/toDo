@@ -11,7 +11,7 @@ const getContainer = (() => {
   const leftContainer = getLeftContainer()
   container.appendChild(leftContainer);
 
-  const rightContainer = getRightContainer();
+  const rightContainer = getRightContainer(1);
   container.appendChild(rightContainer);
   
   body.appendChild(container);

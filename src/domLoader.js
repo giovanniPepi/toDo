@@ -7,8 +7,6 @@ const domLoader = () => {
   getHeader();
   getContainer(); 
   getEventListeners();
-
-
 };
 
 

@@ -2,6 +2,7 @@ import editIcon from "./icons/square-edit-outline.svg";
 import deleteIcon from  "./icons/delete.svg";
 
 const getListItem = () => {
+
   const listItem = document.createElement('div');
   listItem.setAttribute('class', 'listItem');
 
