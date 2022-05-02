@@ -1,21 +1,22 @@
-import body from "./globalDom";
 import getLeftContainer from "./getLeftContainer";
 import getRightContainer from "./getRightContainer";
 
 // module handler
 const getContainer = (() => {
-
-  const container = document.createElement('div');
+  
+  const overlay = document.querySelector('#overlay');
+    
+  const container = document.createElement('section');
   container.setAttribute('class', 'container');
 
-  const leftContainer = getLeftContainer()
+  const leftContainer = getLeftContainer();
   container.appendChild(leftContainer);
 
   const rightContainer = getRightContainer(6);
   container.appendChild(rightContainer);
   
-  body.appendChild(container);
+  overlay.appendChild(container);
   return container;
-})
+});
 
 export default getContainer;

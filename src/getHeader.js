@@ -1,10 +1,12 @@
-  import body from "./globalDom";
   import Logo from "./img/GitHub-Mark-120px-plus.png";
+
 
   // creates header
   const getHeader = () => {
 
-    const header = document.createElement('div');
+    const overlay = document.querySelector('#overlay');
+    
+    const header = document.createElement('header');
     header.setAttribute('class', 'header');
 
     const title = document.createElement('div');
@@ -35,8 +37,7 @@
     header.appendChild(logo);
     header.appendChild(save);
     
-
-    body.prepend(header);
+    overlay.appendChild(header);
   };
 
   export default getHeader;
