@@ -13,10 +13,6 @@ const getListItem = () => {
   listTitle.setAttribute('class', 'listTitle');
   listTitle.textContent = 'title test';
 
-  const listDetails = document.createElement('div');
-  listDetails.setAttribute('class', 'listDetails');
-  listDetails.textContent = 'details'
-
   const listDate = document.createElement('div');
   listDate.setAttribute('class', 'listDate');
   listDate.textContent = '22 apr';
@@ -33,7 +29,6 @@ const getListItem = () => {
   //appends
   listItem.appendChild(listCheck);
   listItem.appendChild(listTitle);
-  listItem.appendChild(listDetails);
   listItem.appendChild(listDate);
   listItem.appendChild(listEdit);
   listItem.appendChild(listRemove);

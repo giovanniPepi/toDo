@@ -174,17 +174,6 @@ body {
 .listTitle-unchecked {
   text-decoration: none;
 }
-.listDetails, .listDetails-unchecked {
-  border: 2px solid var(--sky300);
-  border-radius: var(--borderRadiusSmall);
-  color: var(--slate300);
-  text-align: center;
-  padding: var(--miniPadding);
-}
-.listDetails-unchecked {
-  border: 2px solid var(--sky400);
-  color: var(--slate400);
-}
 
 .listDate, .listDate-unchecked {
   text-align: center;
@@ -234,12 +223,12 @@ li, .title, .listItem, .addBtn, .logo:hover {
 li:hover, .title:hover, .logo:hover {
   transform: scale(1.02);
 }
-.listCheck:hover, .listDetails:hover, .listDate:hover,
+.listCheck:hover, .listDate:hover,
  .listEdit:hover, .listRemove:hover {
    transform: scale(1.10);
 }
 /*mouse*/
-li, .title, .addBtn, .options, .listEdit, .listRemove, .listDetails,
+li, .title, .addBtn, .options, .listEdit, .listRemove,
 .listTitle, .listCheck, .logo, .projectList {
   cursor: pointer;
 }
