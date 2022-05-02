@@ -5,7 +5,6 @@ import getOverlay from "./getOverlay";
 
 //calls modules that handle DOM manipulation
 const domLoader = () => {
-  getOverlay();
   getHeader();
   getContainer(); 
   getEventListeners();

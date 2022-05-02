@@ -20,13 +20,6 @@ const getEventListeners = () => {
     item.addEventListener('click', e => evaluateCheckList(e));
   }))
 
-  //edit and overlay
-  const editBtn = document.querySelectorAll('.listEdit');
-  editBtn.forEach((btn => {
-    btn.addEventListener('click', e => console.log(e));
-  }))
-  
-
 };
 
 export default getEventListeners;

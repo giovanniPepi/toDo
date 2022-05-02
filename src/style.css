@@ -220,12 +220,6 @@ body {
   height: 1.5rem;
   width: 1.5rem;
 }
-.overlayHidden {
-  visibility: hidden;
-}
-.overlayEdit {
-  
-}
 /*transitions*/
 #save:hover, .addBtn:hover {
   background: var(--slate400);
