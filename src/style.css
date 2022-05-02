@@ -224,7 +224,8 @@ li:hover, .title:hover, .logo:hover, .listItem:focus  {
   transform: scale(1.02);
 }
 .listCheck:hover, .listDate:hover,
- .listEdit:hover, .listRemove:hover{
+ .listEdit:hover, .listRemove:hover, li:focus, .addBtn:focus, .title:focus,
+ .logo:focus, #save:focus{
    transform: scale(1.10);
 }
 /*mouse*/

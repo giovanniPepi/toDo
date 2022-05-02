@@ -10,15 +10,18 @@ import body from "./globalDom";
     const title = document.createElement('div');
     title.setAttribute('class', 'title');
     title.textContent = 'EasyList';
+    title.setAttribute('tabindex', '0');
 
     const save = document.createElement('div');
     save.setAttribute('class', 'options');
     save.setAttribute('id', 'save');
     save.textContent = 'save';
+    save.setAttribute('tabindex', '0');
 
     const logo = document.createElement('a');
     logo.setAttribute('class', 'logo');
     logo.setAttribute('href', 'https://github.com/giovanniPepi');
+    logo.setAttribute('tabindex', '0'); 
 
     const logoImg = new Image();
     logoImg.setAttribute('class', 'logo');

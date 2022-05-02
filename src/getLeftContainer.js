@@ -1,5 +1,5 @@
 const getLeftContainer = () => {
-  const leftContainer = document.createElement('div');
+  const leftContainer = document.createElement('nav');
   leftContainer.setAttribute('class', 'leftContainer');
 
   const timeList = document.createElement('ul')
@@ -8,38 +8,47 @@ const getLeftContainer = () => {
   const li1 = document.createElement('li');
   li1.setAttribute('class', 'liDefault');
   li1.textContent = 'Recent';
+  li1.setAttribute('tabindex', '0');
 
   const li2 = document.createElement('li');
   li2.setAttribute('class', 'liDefault');
   li2.textContent = 'Today';
+  li2.setAttribute('tabindex', '0');
   
   const li3 = document.createElement('li');
   li3.setAttribute('class', 'liDefault');
   li3.textContent = 'Week';
+  li3.setAttribute('tabindex', '0');
   
   const li4 = document.createElement('li');
   li4.setAttribute('class', 'liDefault');
   li4.textContent = 'Month';
+  li4.setAttribute('tabindex', '0');
 
   const projectList = document.createElement('ul');
   projectList.setAttribute('class', 'projectList');
   projectList.textContent = 'PROJECTS';
+  projectList.setAttribute('tabindex', '0');
 
   const subProjLi1 = document.createElement('li');
   subProjLi1.setAttribute('class', 'subProj');
   subProjLi1.textContent = 'Proj1';
+  subProjLi1.setAttribute('tabindex', '0');
 
   const subProjLi2 = document.createElement('li');
   subProjLi2.setAttribute('class', 'subProj');
   subProjLi2.textContent = 'Proj2';
+  subProjLi2.setAttribute('tabindex', '0');
 
   const subProjLi3 = document.createElement('li');
   subProjLi3.setAttribute('class', 'subProj');
   subProjLi3.textContent = 'Proj3';
+  subProjLi3.setAttribute('tabindex', '0');
 
   const addBtn = document.createElement('button');
   addBtn.setAttribute('class', 'addBtn');
   addBtn.textContent = '+';
+  addBtn.setAttribute('tabindex', '0');
 
   //appends
   projectList.appendChild(subProjLi1);
