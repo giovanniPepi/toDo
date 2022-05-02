@@ -1,3 +1,5 @@
+import itemEditor from "./itemEditor";
+
 const getEventListeners = () => {
 
   const listCheck = document.querySelectorAll('.listCheck');
@@ -18,6 +20,13 @@ const getEventListeners = () => {
   listCheck.forEach((item => {
     item.addEventListener('click', e => evaluateCheckList(e));
   }))
+
+  //item editor
+
+  const titleList = document.querySelectorAll('.listTitle');
+  titleList.forEach((item => {
+    item.addEventListener('click', e => itemEditor(e.target));
+  }));
 
 };
 
