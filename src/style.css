@@ -220,6 +220,12 @@ body {
   height: 1.5rem;
   width: 1.5rem;
 }
+.overlayHidden {
+  visibility: hidden;
+}
+.overlayEdit {
+  
+}
 /*transitions*/
 #save:hover, .addBtn:hover {
   background: var(--slate400);
@@ -234,13 +240,13 @@ li, .title, .listItem, .addBtn, .logo:hover {
 li:hover, .title:hover, .logo:hover {
   transform: scale(1.02);
 }
+.listCheck:hover, .listDetails:hover, .listDate:hover,
+ .listEdit:hover, .listRemove:hover {
+   transform: scale(1.10);
+}
 /*mouse*/
 li, .title, .addBtn, .options, .listEdit, .listRemove, .listDetails,
 .listTitle, .listCheck, .logo, .projectList {
   cursor: pointer;
 }
 
-.listCheck:hover, .listDetails:hover, .listDate:hover,
- .listEdit:hover, .listRemove:hover {
-   transform: scale(1.10);
- }
