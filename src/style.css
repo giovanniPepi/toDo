@@ -239,3 +239,8 @@ li, .title, .addBtn, .options, .listEdit, .listRemove, .listDetails,
 .listTitle, .listCheck, .logo, .projectList {
   cursor: pointer;
 }
+
+.listCheck:hover, .listDetails:hover, .listDate:hover,
+ .listEdit:hover, .listRemove:hover {
+   transform: scale(1.10);
+ }
