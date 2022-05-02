@@ -32,6 +32,7 @@
   --lime400: #A3E635;
   --lime500: #84cc16;
   --borderRadiusSmall: .3rem;
+  --megaPadding: 3rem;
   --contentPadding: 1rem;
   --subItemPadding: .5rem;
   --miniPadding: .15rem;
@@ -67,14 +68,14 @@ body {
   display:flex;
   flex-direction: column;
   background: var(--slate100);
+  padding: var(--megaPadding);
+  background-image: linear-gradient(var(--slate100), var(--slate300));
 }
 .container {
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 20fr;
   grid-template-rows: 1fr;
-  padding: var(--subItemPadding);
-  max-height: 100vh;  
 }
 .header {
   display: flex;
@@ -102,6 +103,7 @@ body {
   grid-column: 2/3;
   grid-row: auto;
   padding: var(--contentPadding);
+  background-color: var(--slate100);
 }
 .addBtn{
   font-size: 2rem;
@@ -149,6 +151,7 @@ body {
   align-items: center;
   gap: .5rem;
   font-size: var(--fontTask);
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
 }
 .listCheck {
   height: 1rem;
