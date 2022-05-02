@@ -5,6 +5,7 @@ const getListItem = () => {
 
   const listItem = document.createElement('div');
   listItem.setAttribute('class', 'listItem');
+  listItem.setAttribute('tabindex', '0');
 
   const listCheck = document.createElement('div');
   listCheck.setAttribute('class', 'listCheck');

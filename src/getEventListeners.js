@@ -10,10 +10,9 @@ const getEventListeners = () => {
     //classList changes
     e.target.classList.toggle('listCheck-unchecked');  
     parentItems[1].classList.toggle('listTitle-unchecked');
-    parentItems[2].classList.toggle('listDetails-unchecked');
-    parentItems[3].classList.toggle('listDate-unchecked');
-    parentItems[4].classList.toggle('listEdit-unchecked');
-    parentItems[5].classList.toggle('listRemove-unchecked');
+    parentItems[2].classList.toggle('listDate-unchecked');
+    parentItems[3].classList.toggle('listEdit-unchecked');
+    parentItems[4].classList.toggle('listRemove-unchecked');
   };
   
   listCheck.forEach((item => {

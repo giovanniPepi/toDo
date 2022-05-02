@@ -18,7 +18,7 @@ import body from "./globalDom";
 
     const logo = document.createElement('a');
     logo.setAttribute('class', 'logo');
-    logo.setAttribute('href', 'https://github.com/gerijeb');
+    logo.setAttribute('href', 'https://github.com/giovanniPepi');
 
     const logoImg = new Image();
     logoImg.setAttribute('class', 'logo');

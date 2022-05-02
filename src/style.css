@@ -220,11 +220,11 @@ body {
 li, .title, .listItem, .addBtn, .logo:hover {
   transition: var(--itemTransition);
 }
-li:hover, .title:hover, .logo:hover {
+li:hover, .title:hover, .logo:hover, .listItem:focus  {
   transform: scale(1.02);
 }
 .listCheck:hover, .listDate:hover,
- .listEdit:hover, .listRemove:hover {
+ .listEdit:hover, .listRemove:hover{
    transform: scale(1.10);
 }
 /*mouse*/
