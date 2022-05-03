@@ -5,8 +5,6 @@ const itemEditor = (className) => {
   
   className.classList.toggle('listTitleInactive');
   input.classList.toggle('listInputActive');
-
-
 }
 
 export default itemEditor

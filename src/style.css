@@ -75,9 +75,11 @@ body {
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 20fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 10fr;
 }
 .header {
+  grid-column: 1/3;
+  grid-row: 1/2;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -148,7 +150,7 @@ body {
   display: flex;
   height: 4rem;
   align-items: center;
-  gap: .5rem;
+  gap: 1rem;
   font-size: var(--fontTask);
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
 }
@@ -179,6 +181,7 @@ body {
   display: none;
 }
 .listInputActive {
+  flex: 1;
   display: block;
 }
 
@@ -220,7 +223,7 @@ body {
 #save:hover, .addBtn:hover {
   background: var(--slate400);
 }
-.listItem:hover, #save:hover, .addBtn:hover { 
+.listItem:hover, #save:hover, .addBtn:hover, .listInputActive:hover { 
   transform: scale(1.02);
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.15);
 }

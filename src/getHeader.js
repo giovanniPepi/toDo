@@ -1,8 +1,9 @@
 import Logo from "./img/GitHub-Mark-120px-plus.png";
-import body from "./globalDom";
 
   // creates header
   const getHeader = () => {
+
+    const container = document.querySelector('.container');
 
     const header = document.createElement('header');
     header.setAttribute('class', 'header');
@@ -38,7 +39,7 @@ import body from "./globalDom";
     header.appendChild(logo);
     header.appendChild(save);
     
-    body.appendChild(header);
+    container.appendChild(header);
   };
 
   export default getHeader;
