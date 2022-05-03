@@ -1,3 +1,4 @@
+import inputEditor from "./inputEditor";
 import listTitleEditor from "./listTitleEditor";
 import processKeyboard from "./processKeyboard";
 
