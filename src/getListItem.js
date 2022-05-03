@@ -14,6 +14,9 @@ const getListItem = () => {
   listTitle.setAttribute('class', 'listTitle');
   listTitle.textContent = 'title test';
 
+  const listInput = document.createElement('input');
+  listInput.setAttribute('class', 'listInputInactive');
+
   const listDate = document.createElement('div');
   listDate.setAttribute('class', 'listDate');
   listDate.textContent = '22 apr';
@@ -26,10 +29,10 @@ const getListItem = () => {
   listRemove.setAttribute('class', 'listRemove');
   listRemove.innerHTML = deleteIcon;
   
-
   //appends
   listItem.appendChild(listCheck);
   listItem.appendChild(listTitle);
+  listItem.appendChild(listInput);
   listItem.appendChild(listDate);
   listItem.appendChild(listEdit);
   listItem.appendChild(listRemove);
