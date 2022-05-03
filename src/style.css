@@ -51,15 +51,17 @@
 html {
   height: 100%;
 }
+ /* css resets */
 ul {
-  /* css reset */
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-/*css reset*/
 button {
   border: none;
+}
+input {
+  all:unset;
 }
 body {
   line-height: 150%;
@@ -183,6 +185,9 @@ body {
 .listInputActive {
   flex: 1;
   display: block;
+  outline: .5px solid var(--slate500);
+  border-radius: var(--borderRadiusSmall);
+  padding: 0 .5rem 0 .5rem;
 }
 
 .listDate, .listDate-unchecked {
