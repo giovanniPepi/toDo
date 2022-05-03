@@ -1,4 +1,5 @@
-import itemEditor from "./itemEditor";
+import listTitleEditor from "./listTitleEditor";
+import processKeyboard from "./processKeyboard";
 
 const getEventListeners = () => {
 
@@ -21,12 +22,22 @@ const getEventListeners = () => {
     item.addEventListener('click', e => evaluateCheckList(e));
   }))
 
-  //item editor
-
+  //listens for click on title and toggle class/input
   const titleList = document.querySelectorAll('.listTitle');
   titleList.forEach((item => {
-    item.addEventListener('click', e => itemEditor(e.target));
+    item.addEventListener('click', e => listTitleEditor(e.target));
   }));
+
+  //listens for input saving and calls titleList
+  const titleInputList = document.querySelectorAll('.listInputInactive');
+  titleInputList.forEach((item => {
+    item.addEventListener('keyup', e => {
+      processKeyboard(e);
+    })
+  }));
+  
+
+
 
 };
 

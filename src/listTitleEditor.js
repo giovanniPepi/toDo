@@ -1,5 +1,5 @@
 //toggles classLists; removes title and inserts input
-const itemEditor = (className) => {
+const listTitleEditor = (className) => {
   const itemSiblings = className.parentElement;
   const input = itemSiblings.children[2];
   
@@ -7,4 +7,4 @@ const itemEditor = (className) => {
   input.classList.toggle('listInputActive');
 }
 
-export default itemEditor
+export default listTitleEditor;
