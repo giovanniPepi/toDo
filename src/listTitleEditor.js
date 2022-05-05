@@ -7,7 +7,6 @@ const listTitleEditor = (target) => {
   
   target.classList.toggle('listTitleInactive');
   input.classList.toggle('listInputActive');
-
   input.setAttribute('value', `${target.textContent}`);
 
   //add focus

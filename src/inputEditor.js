@@ -5,6 +5,7 @@ const inputEditor = (target) => {
   
   target.classList.remove('listInputActive');
   title.classList.remove('listTitleInactive');
+  title.textContent = target.value;
 }
 
 export default inputEditor;
