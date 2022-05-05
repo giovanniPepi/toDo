@@ -16,6 +16,7 @@ const getListItem = () => {
 
   const listInput = document.createElement('input');
   listInput.setAttribute('class', 'listInputInactive');
+  listInput.setAttribute('type', 'text');
 
   const listDate = document.createElement('div');
   listDate.setAttribute('class', 'listDate');

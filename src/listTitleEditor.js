@@ -1,11 +1,14 @@
 import getFocus from "./getFocus";
+
 //toggles classLists; removes title and inserts input
-const listTitleEditor = (className) => {
-  const itemSiblings = className.parentElement;
+const listTitleEditor = (target) => {
+  const itemSiblings = target.parentElement;
   const input = itemSiblings.children[2];
   
-  className.classList.toggle('listTitleInactive');
+  target.classList.toggle('listTitleInactive');
   input.classList.toggle('listInputActive');
+
+  input.setAttribute('value', `${target.textContent}`);
 
   //add focus
   getFocus(input);
