@@ -1,6 +1,7 @@
 import listTitleEditor from "./listTitleEditor";
 import processKeyboard from "./processKeyboard";
 import processEditIcon from "./processEditIcon";
+import processDeleteIcon from "./processDeleteIcon";
 
 const getEventListeners = () => {
 
@@ -35,7 +36,6 @@ const getEventListeners = () => {
     item.addEventListener('click', e => processEditIcon(e));
   }))
 
-
   //listens for input saving and calls titleList
   const titleInputList = document.querySelectorAll('.listInputInactive');
   titleInputList.forEach((item => {
@@ -43,6 +43,12 @@ const getEventListeners = () => {
       processKeyboard(e);
     })
   }));
+
+  // handles delete Icon
+  const deleteList = document.querySelectorAll('.listRemove');
+  deleteList.forEach((item => {
+    item.addEventListener('click', e => processDeleteIcon(e));
+  }))
   
 
 
