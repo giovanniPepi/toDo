@@ -198,19 +198,15 @@ body {
 .listDate-unchecked {
   font-weight: 600;
 }
-.listEdit, .listEdit-unchecked {
+.listEdit, .listEdit-unchecked, svg, path {
   height: var(--miniBoxSizingIcon);
   width: var(--miniBoxSizingIcon);
-  background-image: url("/src/icons/square-edit-outline.svg");
-  background-size: cover;
   fill: gray;
 }
 .listRemove {
   height: var(--miniBoxSizingIcon);
   width: var(--miniBoxSizingIcon);
   margin-right: var(--listMargin);
-  background-image: url("/src/icons/delete.svg");
-  background-size: cover;
   fill: gray;
 }
 .listEdit-unchecked, .listRemove-unchecked {

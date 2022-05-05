@@ -1,6 +1,6 @@
-import inputEditor from "./inputEditor";
 import listTitleEditor from "./listTitleEditor";
 import processKeyboard from "./processKeyboard";
+import processEditIcon from "./processEditIcon";
 
 const getEventListeners = () => {
 
@@ -28,6 +28,13 @@ const getEventListeners = () => {
   titleList.forEach((item => {
     item.addEventListener('click', e => listTitleEditor(e.target));
   }));
+
+  //same as clicking on title, but as an icon
+  const listEdit = document.querySelectorAll('.listEdit');
+  listEdit.forEach((item => {
+    item.addEventListener('click', e => processEditIcon(e));
+  }))
+
 
   //listens for input saving and calls titleList
   const titleInputList = document.querySelectorAll('.listInputInactive');
